@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- TITLE FOR THE WEBSITE-->
+    <title>L5 Accounting</title>
+
+    <!-- -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- LINKING CSS FILE TO THIS HTML FILE -->
+    <link rel="stylesheet" type="text/css" href="/Users/Starlyn/SublimeTextProjects/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="homepage.css">
+
+
+</head>
+<body>
+
+    <div class="container col-lg-12">
+        <!--    FORM THAT WRAPS EVERYTHING IN THE PAGE -->
+        <div class="login-form col-lg-12">
+            
+            <div class="logo">
+                <!-- IMAGE FOR THE LOGO -->
+                <center><img src="Images/L5-Accounting-Logo.png" height= "170"/></center>
+            </div>
+            
+            <!-- FORM THAT WRAPS LOGIN AND REGISTER FORM-->
+            <div class="form">
+            
+                <!-- DIV FOR THE AVATAR IMAGE -->
+                <div>
+                    <!-- AVATAT IMAGE -->
+                    <center><img src="Images/avatar.png" height="100"></center>
+                </div>
+
+                <!-- FORM FOR THE REGISTRATION -->
+                <form class="register-form">
+
+                    <!-- INPUTS -->
+                    <input name="username" type="text" placeholder="user name" required/>
+                    <input name="password" type="text" placeholder="password" required/>
+                    <input name="email" type="email" placeholder="email id" required/><br>
+
+                    <!-- REGISTER BUTTON -->
+                    <button>Register</button>
+                    
+                    <!-- ALREADY REGISTER MESSAGE -->
+                    <p class="message">
+                        Already Registered? <a href="#">Login</a>
+                    </p>
+                </form>
+                
+                <!-- FORM FOR THE LOGIN -->
+                <form class="login-form">
+
+                    <!-- INPUTS -->
+                    <input type="text" id="usn" placeholder="user name" required="true"/>
+                    <input type="password" id="psw" placeholder="password" required="true"/><br>
+
+                    <!-- LOGIN BUTTON -->
+                    <button onclick="validate()">Login</button>
+
+                    <!-- NOT REGISTER MESSAGE -->
+                    <p class="message">
+                        Not Registered <a href="#">Register</a>
+                    </p>
+
+                    <!-- FORGET PASSWORD LINK -->
+                    <a href="Forget Password">
+                        <div class="forgetPassword">
+                            <p>Forget Password</p>
+                        </div> 
+                    </a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="action.js"></script> 
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+DROP SCHEMA IF EXISTS `account_database`;
+CREATE SCHEMA `account_database` ;
+
+CREATE TABLE `account_database`.`clients` (
+  `client` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`client`));
+
+CREATE TABLE `account_database`.`food_truck` (
+  `t_id` INT NOT NULL AUTO_INCREMENT,
+  `client_name` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL,
+  `inocme` FLOAT NULL,
+  `expense` FLOAT NULL,
+  `tax` FLOAT NULL,
+  FOREIGN KEY (`client_name`)  REFERENCES `account_database`.`clients` (`client`),
+  PRIMARY KEY (`t_id`));
+
+CREATE TABLE `account_database`.`bread_factory` (
+  `t_id` INT NOT NULL AUTO_INCREMENT,
+  `client_name` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL,
+  `inocme` FLOAT NULL,
+  `expense` FLOAT NULL,
+  `tax` FLOAT NULL,
+  FOREIGN KEY (`client_name`)  REFERENCES `account_database`.`clients` (`client`),
+  PRIMARY KEY (`t_id`));
+
+CREATE TABLE `account_database`.`sandwich_shop` (
+  `t_id` INT NOT NULL AUTO_INCREMENT,
+  `client_name` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL,
+  `inocme` FLOAT NULL,
+  `expense` FLOAT NULL,
+  `tax` FLOAT NULL,
+  FOREIGN KEY (`client_name`)  REFERENCES `account_database`.`clients` (`client`),
+  PRIMARY KEY (`t_id`));
+
+
+CREATE TABLE `account_database`.`battery_company` (
+  `t_id` INT NOT NULL AUTO_INCREMENT,
+  `client_name` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL,
+  `inocme` FLOAT NULL,
+  `expense` FLOAT NULL,
+  `tax` FLOAT NULL,
+  FOREIGN KEY (`client_name`)  REFERENCES `account_database`.`clients` (`client`),
+  PRIMARY KEY (`t_id`));
+
+
+CREATE TABLE `account_database`.`luggage_company` (
+  `t_id` INT NOT NULL AUTO_INCREMENT,
+  `client_name` VARCHAR(45) NOT NULL,
+  `state` VARCHAR(45) NOT NULL,
+  `date` DATE NOT NULL,
+  `inocme` FLOAT NULL,
+  `expense` FLOAT NULL,
+  `tax` FLOAT NULL,
+  FOREIGN KEY (`client_name`)  REFERENCES `account_database`.`clients` (`client`),
+  PRIMARY KEY (`t_id`));
+
+
+
